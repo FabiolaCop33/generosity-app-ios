@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC5156982C2F846F00D763B8 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5156972C2F846F00D763B8 /* CustomMarkerView.swift */; };
-		CC70B5302C33515A00273D79 /* CentroBondadDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC70B52F2C33515A00273D79 /* CentroBondadDetailView.swift */; };
-		CC97736D2C2B4CF500CE3BD2 /* GenerosityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC97736C2C2B4CF500CE3BD2 /* GenerosityApp.swift */; };
-		CC97736F2C2B4CF500CE3BD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC97736E2C2B4CF500CE3BD2 /* ContentView.swift */; };
-		CC9773712C2B4CF600CE3BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9773702C2B4CF600CE3BD2 /* Assets.xcassets */; };
-		CC9773742C2B4CF600CE3BD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9773732C2B4CF600CE3BD2 /* Preview Assets.xcassets */; };
-		CC97737B2C2B4DDE00CE3BD2 /* CentroBondad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC97737A2C2B4DDE00CE3BD2 /* CentroBondad.swift */; };
-		CC97737D2C2B769E00CE3BD2 /* ClienteCentroBondand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC97737C2C2B769E00CE3BD2 /* ClienteCentroBondand.swift */; };
-		CC97737F2C2B7B5C00CE3BD2 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC97737E2C2B7B5C00CE3BD2 /* Constantes.swift */; };
-		CCA8C3022C347F72007A96FA /* ModalPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8C3012C347F72007A96FA /* ModalPresentationManager.swift */; };
-		CCA8C3042C348362007A96FA /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8C3032C348362007A96FA /* BlurView.swift */; };
+		CC4ADEBB2C37697400E5A59F /* CentrosBondadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEAB2C37697400E5A59F /* CentrosBondadViewModel.swift */; };
+		CC4ADEBC2C37697400E5A59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4ADEAD2C37697400E5A59F /* Assets.xcassets */; };
+		CC4ADEBD2C37697400E5A59F /* CentroBondadDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEAE2C37697400E5A59F /* CentroBondadDetailView.swift */; };
+		CC4ADEBE2C37697400E5A59F /* CentroBondadMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEAF2C37697400E5A59F /* CentroBondadMapView.swift */; };
+		CC4ADEBF2C37697400E5A59F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB02C37697400E5A59F /* ContentView.swift */; };
+		CC4ADEC02C37697400E5A59F /* GenerosityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB22C37697400E5A59F /* GenerosityApp.swift */; };
+		CC4ADEC12C37697400E5A59F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4ADEB32C37697400E5A59F /* Preview Assets.xcassets */; };
+		CC4ADEC22C37697400E5A59F /* CentroBondadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB52C37697400E5A59F /* CentroBondadModel.swift */; };
+		CC4ADEC32C37697400E5A59F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB72C37697400E5A59F /* BlurView.swift */; };
+		CC4ADEC42C37697400E5A59F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB82C37697400E5A59F /* Constants.swift */; };
+		CC4ADEC52C37697400E5A59F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB92C37697400E5A59F /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC5156972C2F846F00D763B8 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
-		CC70B52F2C33515A00273D79 /* CentroBondadDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentroBondadDetailView.swift; sourceTree = "<group>"; };
+		CC4ADEAB2C37697400E5A59F /* CentrosBondadViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentrosBondadViewModel.swift; sourceTree = "<group>"; };
+		CC4ADEAD2C37697400E5A59F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Generosity/Assets.xcassets; sourceTree = "<group>"; };
+		CC4ADEAE2C37697400E5A59F /* CentroBondadDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentroBondadDetailView.swift; sourceTree = "<group>"; };
+		CC4ADEAF2C37697400E5A59F /* CentroBondadMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentroBondadMapView.swift; sourceTree = "<group>"; };
+		CC4ADEB02C37697400E5A59F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC4ADEB22C37697400E5A59F /* GenerosityApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerosityApp.swift; path = Generosity/GenerosityApp.swift; sourceTree = "<group>"; };
+		CC4ADEB32C37697400E5A59F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC4ADEB52C37697400E5A59F /* CentroBondadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentroBondadModel.swift; sourceTree = "<group>"; };
+		CC4ADEB72C37697400E5A59F /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		CC4ADEB82C37697400E5A59F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CC4ADEB92C37697400E5A59F /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		CC9773692C2B4CF500CE3BD2 /* Generosity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generosity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC97736C2C2B4CF500CE3BD2 /* GenerosityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerosityApp.swift; sourceTree = "<group>"; };
-		CC97736E2C2B4CF500CE3BD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CC9773702C2B4CF600CE3BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC9773732C2B4CF600CE3BD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CC97737A2C2B4DDE00CE3BD2 /* CentroBondad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentroBondad.swift; sourceTree = "<group>"; };
-		CC97737C2C2B769E00CE3BD2 /* ClienteCentroBondand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClienteCentroBondand.swift; sourceTree = "<group>"; };
-		CC97737E2C2B7B5C00CE3BD2 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
-		CCA8C3012C347F72007A96FA /* ModalPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationManager.swift; sourceTree = "<group>"; };
-		CCA8C3032C348362007A96FA /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +46,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC4ADEAC2C37697400E5A59F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC4ADEAB2C37697400E5A59F /* CentrosBondadViewModel.swift */,
+			);
+			name = ViewModel;
+			path = Generosity/ViewModel;
+			sourceTree = "<group>";
+		};
+		CC4ADEB12C37697400E5A59F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC4ADEAE2C37697400E5A59F /* CentroBondadDetailView.swift */,
+				CC4ADEAF2C37697400E5A59F /* CentroBondadMapView.swift */,
+				CC4ADEB02C37697400E5A59F /* ContentView.swift */,
+			);
+			name = View;
+			path = Generosity/View;
+			sourceTree = "<group>";
+		};
+		CC4ADEB42C37697400E5A59F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CC4ADEB32C37697400E5A59F /* Preview Assets.xcassets */,
+			);
+			name = "Preview Content";
+			path = "Generosity/Preview Content";
+			sourceTree = "<group>";
+		};
+		CC4ADEB62C37697400E5A59F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC4ADEB52C37697400E5A59F /* CentroBondadModel.swift */,
+			);
+			name = Model;
+			path = Generosity/Model;
+			sourceTree = "<group>";
+		};
+		CC4ADEBA2C37697400E5A59F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CC4ADEB72C37697400E5A59F /* BlurView.swift */,
+				CC4ADEB82C37697400E5A59F /* Constants.swift */,
+				CC4ADEB92C37697400E5A59F /* Networking.swift */,
+			);
+			name = Utilities;
+			path = Generosity/Utilities;
+			sourceTree = "<group>";
+		};
 		CC9773602C2B4CF500CE3BD2 = {
 			isa = PBXGroup;
 			children = (
-				CC97736B2C2B4CF500CE3BD2 /* Generosity */,
+				CC4ADEAD2C37697400E5A59F /* Assets.xcassets */,
+				CC4ADEB22C37697400E5A59F /* GenerosityApp.swift */,
+				CC4ADEB42C37697400E5A59F /* Preview Content */,
+				CC4ADEB62C37697400E5A59F /* Model */,
+				CC4ADEBA2C37697400E5A59F /* Utilities */,
+				CC4ADEB12C37697400E5A59F /* View */,
+				CC4ADEAC2C37697400E5A59F /* ViewModel */,
 				CC97736A2C2B4CF500CE3BD2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,32 +115,6 @@
 				CC9773692C2B4CF500CE3BD2 /* Generosity.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CC97736B2C2B4CF500CE3BD2 /* Generosity */ = {
-			isa = PBXGroup;
-			children = (
-				CC97736C2C2B4CF500CE3BD2 /* GenerosityApp.swift */,
-				CC97736E2C2B4CF500CE3BD2 /* ContentView.swift */,
-				CC97737A2C2B4DDE00CE3BD2 /* CentroBondad.swift */,
-				CC5156972C2F846F00D763B8 /* CustomMarkerView.swift */,
-				CCA8C3012C347F72007A96FA /* ModalPresentationManager.swift */,
-				CC70B52F2C33515A00273D79 /* CentroBondadDetailView.swift */,
-				CCA8C3032C348362007A96FA /* BlurView.swift */,
-				CC97737C2C2B769E00CE3BD2 /* ClienteCentroBondand.swift */,
-				CC97737E2C2B7B5C00CE3BD2 /* Constantes.swift */,
-				CC9773702C2B4CF600CE3BD2 /* Assets.xcassets */,
-				CC9773722C2B4CF600CE3BD2 /* Preview Content */,
-			);
-			path = Generosity;
-			sourceTree = "<group>";
-		};
-		CC9773722C2B4CF600CE3BD2 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CC9773732C2B4CF600CE3BD2 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +149,7 @@
 				TargetAttributes = {
 					CC9773682C2B4CF500CE3BD2 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -146,8 +176,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9773742C2B4CF600CE3BD2 /* Preview Assets.xcassets in Resources */,
-				CC9773712C2B4CF600CE3BD2 /* Assets.xcassets in Resources */,
+				CC4ADEC12C37697400E5A59F /* Preview Assets.xcassets in Resources */,
+				CC4ADEBC2C37697400E5A59F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,15 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC97737F2C2B7B5C00CE3BD2 /* Constantes.swift in Sources */,
-				CC97736F2C2B4CF500CE3BD2 /* ContentView.swift in Sources */,
-				CC70B5302C33515A00273D79 /* CentroBondadDetailView.swift in Sources */,
-				CC97736D2C2B4CF500CE3BD2 /* GenerosityApp.swift in Sources */,
-				CC97737D2C2B769E00CE3BD2 /* ClienteCentroBondand.swift in Sources */,
-				CCA8C3042C348362007A96FA /* BlurView.swift in Sources */,
-				CCA8C3022C347F72007A96FA /* ModalPresentationManager.swift in Sources */,
-				CC97737B2C2B4DDE00CE3BD2 /* CentroBondad.swift in Sources */,
-				CC5156982C2F846F00D763B8 /* CustomMarkerView.swift in Sources */,
+				CC4ADEBD2C37697400E5A59F /* CentroBondadDetailView.swift in Sources */,
+				CC4ADEC32C37697400E5A59F /* BlurView.swift in Sources */,
+				CC4ADEBB2C37697400E5A59F /* CentrosBondadViewModel.swift in Sources */,
+				CC4ADEC52C37697400E5A59F /* Networking.swift in Sources */,
+				CC4ADEC22C37697400E5A59F /* CentroBondadModel.swift in Sources */,
+				CC4ADEBF2C37697400E5A59F /* ContentView.swift in Sources */,
+				CC4ADEBE2C37697400E5A59F /* CentroBondadMapView.swift in Sources */,
+				CC4ADEC02C37697400E5A59F /* GenerosityApp.swift in Sources */,
+				CC4ADEC42C37697400E5A59F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +327,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = Generosity/ContentView.swift;
+				DEVELOPMENT_ASSET_PATHS = Generosity/View/ContentView.swift;
 				DEVELOPMENT_TEAM = TR6XA675H4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -317,6 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.sacrecoeur.Generosity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -327,9 +359,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = Generosity/ContentView.swift;
+				DEVELOPMENT_ASSET_PATHS = Generosity/View/ContentView.swift;
 				DEVELOPMENT_TEAM = TR6XA675H4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

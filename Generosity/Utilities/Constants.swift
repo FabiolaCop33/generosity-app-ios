@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Constantes{
+struct Constants{
     struct Urls{
-        static let centrosBondad = URL(string: "https://generosity.free.beeceptor.com/centros-de-bondad")!
+        static let centrosBondad = URL(string: "http://localhost:8080/centros-de-bondad")!
     }
     
 }
