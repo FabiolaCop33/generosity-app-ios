@@ -20,7 +20,7 @@ struct CentroBondadMapView: View {
                     Annotation(centroBondad.name, coordinate: centroBondad.coordinate){
                         Image(systemName: "house.circle")
                             .tint(.purple)
-                            .shadow(color:.gray, radius: 3)
+                            .shadow(color:.blue, radius: 3)
                             .onTapGesture {
                                 selectedCentroBondad = centroBondad
                             }
