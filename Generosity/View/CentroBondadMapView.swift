@@ -28,11 +28,24 @@ struct CentroBondadMapView: View {
                 }
             }
             .navigationTitle("Centros de Bondad")
+            .navigationBarTitleDisplayMode(.automatic)
+            .toolbar{
+                ToolbarItem(placement: .bottomBar){
+                    //Button
+                }
+                ToolbarItem(placement: .bottomBar){
+                    //Button
+                }
+                ToolbarItem(placement: .bottomBar){
+                    //Button
+                }
+            }
         }
         .onAppear{
             Task {
                 await viewModel.loadCentrosBondad()
             }
+        
         }
         .sheet(item: $selectedCentroBondad) { centroBondand in
             CentroBondadDetailView(centroBondad: centroBondand)
