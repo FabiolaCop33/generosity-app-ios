@@ -35,7 +35,6 @@ struct CentroBondadMapView: View {
             Task {
                 await viewModel.loadCentrosBondad()
             }
-        
         }
         .sheet(item: $selectedCentroBondad) { centroBondand in
             CentroBondadDetailView(centroBondad: centroBondand)

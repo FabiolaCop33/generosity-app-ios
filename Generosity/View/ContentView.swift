@@ -16,23 +16,23 @@ struct ContentView: View {
         TabView {
             
             NavigationStack() {
-                Text("Profile view")
+                Text("Vista del Perfil")
                     .navigationTitle("Profile")
             }
             .tabItem {
-                Label("Profile", systemImage: "person.fill")
+                Text("Perfil")
+                Image(systemName: "person.fill")
             }
             
             CentroBondadMapView()
                 .tabItem {
                     Text("Mapa")
                     Image(systemName: "map")
-                        .renderingMode(.template)
                 }
             CentroBondadListView()
                 .tabItem {
                     Text("Lista")
-                    Image(systemName: "list.bullet")
+                    Image(systemName:"list.bullet")
                 }
             
         }
