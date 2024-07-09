@@ -18,6 +18,7 @@
 		CC4ADEC32C37697400E5A59F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB72C37697400E5A59F /* BlurView.swift */; };
 		CC4ADEC42C37697400E5A59F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB82C37697400E5A59F /* Constants.swift */; };
 		CC4ADEC52C37697400E5A59F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB92C37697400E5A59F /* Networking.swift */; };
+		CC735ED02C3CC5FB002E3FD8 /* CentroBondadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC735ECF2C3CC5FB002E3FD8 /* CentroBondadListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CC4ADEB72C37697400E5A59F /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		CC4ADEB82C37697400E5A59F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC4ADEB92C37697400E5A59F /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		CC735ECF2C3CC5FB002E3FD8 /* CentroBondadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentroBondadListView.swift; sourceTree = "<group>"; };
 		CC9773692C2B4CF500CE3BD2 /* Generosity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generosity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 			children = (
 				CC4ADEAE2C37697400E5A59F /* CentroBondadDetailView.swift */,
 				CC4ADEAF2C37697400E5A59F /* CentroBondadMapView.swift */,
+				CC735ECF2C3CC5FB002E3FD8 /* CentroBondadListView.swift */,
 				CC4ADEB02C37697400E5A59F /* ContentView.swift */,
 			);
 			name = View;
@@ -197,6 +200,7 @@
 				CC4ADEBE2C37697400E5A59F /* CentroBondadMapView.swift in Sources */,
 				CC4ADEC02C37697400E5A59F /* GenerosityApp.swift in Sources */,
 				CC4ADEC42C37697400E5A59F /* Constants.swift in Sources */,
+				CC735ED02C3CC5FB002E3FD8 /* CentroBondadListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
