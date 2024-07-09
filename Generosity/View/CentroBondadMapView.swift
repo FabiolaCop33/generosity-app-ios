@@ -15,7 +15,7 @@ struct CentroBondadMapView: View {
     let viewModel = CentrosBondadViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Map() {
                 ForEach(viewModel.centrosBondad) { centroBondad in
                     Annotation(centroBondad.name, coordinate: centroBondad.coordinate){
@@ -30,23 +30,6 @@ struct CentroBondadMapView: View {
             }
             .navigationTitle("Centros de Bondad")
             .navigationBarTitleDisplayMode(.automatic)
-            .toolbar{
-                ToolbarItem(placement: .bottomBar){
-                   // NavigationLink(destination: CentroBondadListView(viewModel: viewModel), isActive: $navigateToList){
-                        //Button(action: {
-                            //navigateToList = true
-                        //}){
-                            //Image (systemName: "list.bullet")
-                        //}
-                    //}
-                }
-                ToolbarItem(placement: .bottomBar){
-                    //Button
-                }
-                ToolbarItem(placement: .bottomBar){
-                    //Button
-                }
-            }
         }
         .onAppear{
             Task {

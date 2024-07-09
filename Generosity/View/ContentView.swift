@@ -12,7 +12,15 @@ import MapKit
 struct ContentView: View {
     
     var body: some View {
-        CentroBondadMapView()
+        
+        TabView {
+            CentroBondadMapView()
+                .tabItem {
+                    Text("Mapa")
+                    Image(systemName: "map")
+                        .renderingMode(.template)
+                }
+        }
     }
 
   }
