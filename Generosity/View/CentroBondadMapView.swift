@@ -11,6 +11,7 @@ import MapKit
 struct CentroBondadMapView: View {
     @State private var selectedCentroBondad: CentroBondadModel? = nil
     @State private var showModal: Bool = false
+    @State private var navigateToList: Bool = false
     let viewModel = CentrosBondadViewModel()
     
     var body: some View {
@@ -31,7 +32,13 @@ struct CentroBondadMapView: View {
             .navigationBarTitleDisplayMode(.automatic)
             .toolbar{
                 ToolbarItem(placement: .bottomBar){
-                    //Button
+                    NavigationLink(destination: CentroBondadListView(viewModel: viewModel), isActive: $navigateToList){
+                        Button(action: {
+                            navigateToList = true
+                        }){
+                            Image (systemName: "list.bullet")
+                        }
+                    }
                 }
                 ToolbarItem(placement: .bottomBar){
                     //Button

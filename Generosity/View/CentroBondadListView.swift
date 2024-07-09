@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CentroBondadListView: View {
-    @ObservedObject var viewModel: CentrosBondadViewModel
-
+    let viewModel = CentrosBondadViewModel()
+    
     var body: some View {
         List(viewModel.centrosBondad){centroBondad in
             VStack(alignment: .leading){
