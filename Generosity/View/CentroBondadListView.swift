@@ -21,11 +21,11 @@ struct CentroBondadListView: View {
                 }
             }
             .navigationTitle("Lista de Centros de Bondad")
-            .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-                Task {
-                    await viewModel.loadCentrosBondad()
-                }
+            .navigationBarTitleDisplayMode(.automatic)
+        }
+        .onAppear {
+            Task {
+                await viewModel.loadCentrosBondad()
             }
         }
     }
