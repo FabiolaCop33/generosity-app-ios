@@ -11,18 +11,21 @@ struct CentroBondadListView: View {
     let viewModel = CentrosBondadViewModel()
     
     var body: some View {
-        List(viewModel.centrosBondad){centroBondad in
-            VStack(alignment: .leading){
-                Text(centroBondad.name)
-                    .font(.headline)
-                Text(centroBondad.address)
-                    .font(.subheadline)
+        NavigationStack(){
+            List(viewModel.centrosBondad){centroBondad in
+                VStack(alignment: .leading){
+                    Text(centroBondad.name)
+                        .font(.headline)
+                    Text(centroBondad.address)
+                        .font(.subheadline)
+                }
             }
-        }
-        .navigationTitle("Lista de Centros de Bondad")
-        .onAppear {
-            Task {
-                await viewModel.loadCentrosBondad()
+            .navigationTitle("Lista de Centros de Bondad")
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                Task {
+                    await viewModel.loadCentrosBondad()
+                }
             }
         }
     }
