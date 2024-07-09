@@ -32,13 +32,13 @@ struct CentroBondadMapView: View {
             .navigationBarTitleDisplayMode(.automatic)
             .toolbar{
                 ToolbarItem(placement: .bottomBar){
-                    NavigationLink(destination: CentroBondadListView(viewModel: viewModel), isActive: $navigateToList){
-                        Button(action: {
-                            navigateToList = true
-                        }){
-                            Image (systemName: "list.bullet")
-                        }
-                    }
+                   // NavigationLink(destination: CentroBondadListView(viewModel: viewModel), isActive: $navigateToList){
+                        //Button(action: {
+                            //navigateToList = true
+                        //}){
+                            //Image (systemName: "list.bullet")
+                        //}
+                    //}
                 }
                 ToolbarItem(placement: .bottomBar){
                     //Button

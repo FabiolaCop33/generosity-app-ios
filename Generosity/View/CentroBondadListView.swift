@@ -20,8 +20,8 @@ struct CentroBondadListView: View {
             }
         }
         .navigationTitle("Lista de Centros de Bondad")
-        .onAppear{
-            Task{
+        .onAppear {
+            Task {
                 await viewModel.loadCentrosBondad()
             }
         }
