@@ -15,7 +15,6 @@ struct CentroBondadMapView: View {
     let viewModel = CentrosBondadViewModel()
     
     var body: some View {
-        NavigationStack {
             Map() {
                 ForEach(viewModel.centrosBondad) { centroBondad in
                     Annotation(centroBondad.name, coordinate: centroBondad.coordinate){
@@ -28,13 +27,10 @@ struct CentroBondadMapView: View {
                     }
                 }
             }
-            .navigationTitle("Centros de Bondad")
-            .navigationBarTitleDisplayMode(.automatic)
-        }
         .onAppear{
-            Task {
+                Task {
                 await viewModel.loadCentrosBondad()
-            }
+                }
         }
         .sheet(item: $selectedCentroBondad) { centroBondand in
             CentroBondadDetailView(centroBondad: centroBondand)

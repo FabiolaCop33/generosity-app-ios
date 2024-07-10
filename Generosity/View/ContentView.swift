@@ -17,23 +17,29 @@ struct ContentView: View {
             
             NavigationStack() {
                 Text("Vista del Perfil")
-                    .navigationTitle("Profile")
+                    .navigationTitle("Perfil Generosity")
             }
             .tabItem {
                 Text("Perfil")
                 Image(systemName: "person.fill")
             }
             
-            CentroBondadMapView()
-                .tabItem {
-                    Text("Mapa")
-                    Image(systemName: "map")
-                }
-            CentroBondadListView()
-                .tabItem {
-                    Text("Lista")
-                    Image(systemName:"list.bullet")
-                }
+            NavigationStack(){
+                CentroBondadMapView()
+                    .navigationTitle("Mapa Generosity")
+            }
+            .tabItem {
+                Text("Mapa")
+                Image(systemName: "map")
+            }
+            NavigationStack(){
+                CentroBondadListView()
+                    .navigationTitle("Lista Generosity")
+            }
+            .tabItem {
+                Text("Lista")
+                Image(systemName:"list.bullet")
+            }
             
         }
         .tint(.pink)

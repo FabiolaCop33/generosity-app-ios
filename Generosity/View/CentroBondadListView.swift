@@ -11,7 +11,7 @@ struct CentroBondadListView: View {
     let viewModel = CentrosBondadViewModel()
     
     var body: some View {
-        NavigationStack(){
+        
             List(viewModel.centrosBondad){centroBondad in
                 VStack(alignment: .leading){
                     Text(centroBondad.name)
@@ -20,10 +20,7 @@ struct CentroBondadListView: View {
                         .font(.subheadline)
                 }
             }
-            .navigationTitle("Lista de Centros de Bondad")
-            .navigationBarTitleDisplayMode(.automatic)
-        }
-        .onAppear {
+            .onAppear {
             Task {
                 await viewModel.loadCentrosBondad()
             }
