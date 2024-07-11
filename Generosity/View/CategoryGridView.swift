@@ -9,33 +9,38 @@ import SwiftUI
 
 struct CategoryGridView: View {
     let viewModel = CentrosBondadViewModel()
-    var categories: [String: [CentroBondadModel]] {
-        var categoriesDict = [String:[CentroBondadModel]]()
-        for centroBondad in viewModel.centrosBondad{
-            categoriesDict[centroBondad.category, default: []].append(centroBondad)
-        }
-        return categoriesDict
-    }
+    var categories: [String: [CentroBondadModel]]
     
-    @State private var searchText: String = ""
-    
-    var filteredCategories: [String: [CentroBondadModel]]{
-        var filteredDict = [String: [CentroBondadModel]]()
-        for (category, centros) in categories {
-            if category.lowercased().contains(searchText.lowercased()){
-                filteredDict[category] = centros
-            }
-        }
-        return filteredDict
+    init(categories: [String: [CentroBondadModel]]){
+        self.categories = categories
     }
     
     var body: some View {
         ScrollView{
-           Text("Catálogo de categorias")
+            LazyVGrid(columns:[GridItem(.flexible())]){
+                ForEach(categories.keys.sorted(), id: \.self){ categories in
+                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        .fill()
+                        .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                }
+            }
+            .padding()
+        }
+        .onAppear {
+            Task {
+                await viewModel.loadCentrosBondad()
+            }
         }
     }
 }
-
-#Preview {
-    CategoryGridView()
+struct CategoryGridView_Previews: PreviewProvider {
+    static var previews: some View {
+        let sampleCategories: [String: [CentroBondadModel]] = [
+            "Niños y Adolescentes": [],
+            "Adultos Mayores": [],
+            "Discapacidad": [],
+        ]
+        return CategoryGridView(categories: sampleCategories)
+    }
 }
+

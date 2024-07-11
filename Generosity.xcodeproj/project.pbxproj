@@ -20,6 +20,8 @@
 		CC4ADEC52C37697400E5A59F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEB92C37697400E5A59F /* Networking.swift */; };
 		CC735ED02C3CC5FB002E3FD8 /* CentroBondadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC735ECF2C3CC5FB002E3FD8 /* CentroBondadListView.swift */; };
 		CCDEAE212C404C80007F446C /* CategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDEAE202C404C80007F446C /* CategoryGridView.swift */; };
+		CCDEAE232C40585E007F446C /* CentroBondadCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDEAE222C40585E007F446C /* CentroBondadCategoryListView.swift */; };
+		CCDEAE252C40587E007F446C /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDEAE242C40587E007F446C /* CategoryCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		CC735ECF2C3CC5FB002E3FD8 /* CentroBondadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentroBondadListView.swift; sourceTree = "<group>"; };
 		CC9773692C2B4CF500CE3BD2 /* Generosity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generosity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDEAE202C404C80007F446C /* CategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridView.swift; sourceTree = "<group>"; };
+		CCDEAE222C40585E007F446C /* CentroBondadCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentroBondadCategoryListView.swift; sourceTree = "<group>"; };
+		CCDEAE242C40587E007F446C /* CategoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,9 @@
 			children = (
 				CC4ADEAE2C37697400E5A59F /* CentroBondadDetailView.swift */,
 				CC4ADEAF2C37697400E5A59F /* CentroBondadMapView.swift */,
+				CCDEAE222C40585E007F446C /* CentroBondadCategoryListView.swift */,
 				CC735ECF2C3CC5FB002E3FD8 /* CentroBondadListView.swift */,
+				CCDEAE242C40587E007F446C /* CategoryCardView.swift */,
 				CC4ADEB02C37697400E5A59F /* ContentView.swift */,
 				CCDEAE202C404C80007F446C /* CategoryGridView.swift */,
 			);
@@ -199,10 +205,12 @@
 				CC4ADEBB2C37697400E5A59F /* CentrosBondadViewModel.swift in Sources */,
 				CC4ADEC52C37697400E5A59F /* Networking.swift in Sources */,
 				CC4ADEC22C37697400E5A59F /* CentroBondadModel.swift in Sources */,
+				CCDEAE232C40585E007F446C /* CentroBondadCategoryListView.swift in Sources */,
 				CCDEAE212C404C80007F446C /* CategoryGridView.swift in Sources */,
 				CC4ADEBF2C37697400E5A59F /* ContentView.swift in Sources */,
 				CC4ADEBE2C37697400E5A59F /* CentroBondadMapView.swift in Sources */,
 				CC4ADEC02C37697400E5A59F /* GenerosityApp.swift in Sources */,
+				CCDEAE252C40587E007F446C /* CategoryCardView.swift in Sources */,
 				CC4ADEC42C37697400E5A59F /* Constants.swift in Sources */,
 				CC735ED02C3CC5FB002E3FD8 /* CentroBondadListView.swift in Sources */,
 			);
