@@ -9,6 +9,11 @@ import SwiftUI
 
 struct CentroBondadListView: View {
     let viewModel = CentrosBondadViewModel()
+    let backgroundGradient = LinearGradient(
+        colors: [Color.white,
+                 Color.cyan
+                    .opacity(0.08)],
+        startPoint: .top, endPoint: .bottom)
     
     var body: some View {
         

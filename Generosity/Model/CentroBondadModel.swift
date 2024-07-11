@@ -16,7 +16,7 @@ struct CentroBondadModel: Decodable, Identifiable {
     let longitude: Double
     let address: String
     let description: String
-    let id_category: Int
+    let id_category: String
     let category: String
     
     var coordinate: CLLocationCoordinate2D{

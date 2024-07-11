@@ -77,7 +77,7 @@ struct CentroBondadDetailView: View{
                     .shadow(color:.blue,radius: 2)
                     
                     }.padding()
-                    Text("Categiría")
+                    Text("Categoría")
                     .font(.system(size: 15, weight: .regular))
                     .multilineTextAlignment(.leading).foregroundColor(.blue
                         .opacity(0.5))
@@ -124,5 +124,5 @@ struct CentroBondadDetailView: View{
 }
 
 #Preview{
-    CentroBondadDetailView(centroBondad: CentroBondadModel(id: 12800010009, name: "Casa del Niño Villa de la Asunción, A.C.", latitude: 21.8867269621701, longitude: -102.320783705718, address: "Dr Salvador Quezada Limon 501, Curtidores, 20040 Aguascalientes, Ags.", description: "Asistencia social a niños, niñas y adolescentes. Albergue, alimentación, vestido, atención médica, educación, recreación, formación moral y talleres.", id_category: 6, category: "Centro Asistencia Social a Niñas, Niños y Adolescentes"))
+    CentroBondadDetailView(centroBondad: CentroBondadModel(id: 12800010009, name: "Casa del Niño Villa de la Asunción, A.C.", latitude: 21.8867269621701, longitude: -102.320783705718, address: "Dr Salvador Quezada Limon 501, Curtidores, 20040 Aguascalientes, Ags.", description: "Asistencia social a niños, niñas y adolescentes. Albergue, alimentación, vestido, atención médica, educación, recreación, formación moral y talleres.", id_category: "CASNNA", category: "Centro Asistencia Social a Niñas, Niños y Adolescentes"))
 }
