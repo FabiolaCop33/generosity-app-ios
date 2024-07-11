@@ -34,11 +34,11 @@ struct ContentView: View {
             }
             NavigationStack(){
                 CentroBondadListView()
-                    .navigationTitle("Lista Generosity")
+                    .navigationTitle("Explorar en Generosity")
             }
             .tabItem {
-                Text("Lista")
-                Image(systemName:"list.bullet")
+                Text("Explorar")
+                Image(systemName:"magnifyingglass")
             }
             
         }
