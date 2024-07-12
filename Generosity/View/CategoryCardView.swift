@@ -12,7 +12,7 @@ struct CategoryCardView: View {
 
     var body: some View {
         ZStack {
-            Color.cyan
+            Color.pink
                 .opacity(0.2)
                 .cornerRadius(10)
 

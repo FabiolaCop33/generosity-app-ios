@@ -33,7 +33,7 @@ struct ContentView: View {
                 Image(systemName: "map")
             }
             NavigationStack(){
-                CentroBondadListView()
+                CategoryGridView(categories: ["Centro Asistencia Social a Niñas, Niños y Adolescentes": [], "Centro Asistencia Social a Adultos Mayores": [], "Centro de Asistencia Social a Personas con Discapacidad": [], "Centro de Asistencia Social a Personas con Adicciones": []])
                     .navigationTitle("Explorar en Generosity")
             }
             .tabItem {
