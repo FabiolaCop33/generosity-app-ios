@@ -16,23 +16,16 @@ struct CategoryGridView: View {
     }
     
     var body: some View {
-        ScrollView{
-            LazyVGrid(columns:[GridItem(.flexible())]){
-                ForEach(categories.keys.sorted(), id: \.self){ categories in
-                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                        .fill()
-                        .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                }
+        ScrollView {
+          LazyVGrid(columns: [GridItem(.flexible())]) {
+            ForEach(categories.keys.sorted(), id: \.self) { category in
+              CategoryCardView(category: category)
             }
-            .padding()
+          }
+          .padding()
         }
-        .onAppear {
-            Task {
-                await viewModel.loadCentrosBondad()
-            }
-        }
+      }
     }
-}
 struct CategoryGridView_Previews: PreviewProvider {
     static var previews: some View {
         let sampleCategories: [String: [CentroBondadModel]] = [
