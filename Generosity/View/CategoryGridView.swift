@@ -19,10 +19,17 @@ struct CategoryGridView: View {
         ScrollView {
           LazyVGrid(columns: [GridItem(.flexible())]) {
             ForEach(categories.keys.sorted(), id: \.self) { category in
-              CategoryCardView(category: category)
+                NavigationLink(
+                  destination: CentroBondadCategoryListView(
+                    category: category,
+                    centrosBondad: categories[category] ?? []
+                  )
+                ) {
+                  CategoryCardView(category: category)
+                }
+              }
             }
-          }
-          .padding()
+            .padding()
         }
       }
     }
