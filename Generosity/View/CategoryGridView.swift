@@ -32,7 +32,8 @@ struct CategoryGridView_Previews: PreviewProvider {
             "Niños y Adolescentes": [],
             "Adultos Mayores": [],
             "Discapacidad": [],
-            "Adicciones": []
+            "Adicciones": [],
+            "Salud": []
         ]
         return CategoryGridView(categories: sampleCategories)
     }

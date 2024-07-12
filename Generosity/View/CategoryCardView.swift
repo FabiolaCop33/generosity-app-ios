@@ -27,7 +27,7 @@ struct CategoryCardView: View {
             }
             .padding()
         }
-        .frame(width: 370, height: 150)
+        .frame(width: 370, height: 120)
     }
 }
 struct CategoryCardView_Previews: PreviewProvider {
