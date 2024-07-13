@@ -21,7 +21,8 @@ struct StatePickerView: View {
                         .font(.body)
                     
                 }
-            }.pickerStyle(.wheel)
+            }
+            .pickerStyle(.wheel)
             Text("Mi Estado es: \(selectedStateID)")
         }
         .padding()

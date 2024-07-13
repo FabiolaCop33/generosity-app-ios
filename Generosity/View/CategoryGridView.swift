@@ -8,28 +8,32 @@
 import SwiftUI
 
 struct CategoryGridView: View {
-    let viewModel = CentrosBondadViewModel()
+    var viewModel = CentrosBondadViewModel()
     var categories: [String: [CentroBondadModel]]
+    @State private var selectedStateID = ""
+    var showPicker = true
     
     init(categories: [String: [CentroBondadModel]]){
         self.categories = categories
     }
     
     var body: some View {
-        ScrollView {
-          LazyVGrid(columns: [GridItem(.flexible())]) {
-            ForEach(categories.keys.sorted(), id: \.self) { category in
-                NavigationLink(
-                  destination: CentroBondadCategoryListView(
-                    category: category,
-                    centrosBondad: categories[category] ?? []
-                  )
-                ) {
-                  CategoryCardView(category: category)
+        VStack{
+            ScrollView {
+              LazyVGrid(columns: [GridItem(.flexible())]) {
+                ForEach(categories.keys.sorted(), id: \.self) { category in
+                    NavigationLink(
+                      destination: CentroBondadCategoryListView(
+                        category: category,
+                        centrosBondad: categories[category] ?? []
+                      )
+                    ) {
+                      CategoryCardView(category: category)
+                    }
+                  }
                 }
-              }
+                .padding()
             }
-            .padding()
         }
       }
     }
