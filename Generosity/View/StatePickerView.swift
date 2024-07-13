@@ -14,10 +14,22 @@ struct StatePickerView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Picker("Selecciona tu Estado...", selection: $selectedStateID){
+                ForEach(listOfStates, id: \.self){state in
+                    Text(state)
+                        .font(.body)
+                    
+                }
+            }.pickerStyle(.wheel)
+            Text("Mi Estado es: \(selectedStateID)")
+        }
+        .padding()
     }
 }
 
-#Preview {
-    StatePickerView()
+struct StatePickerView_Previews: PreviewProvider{
+    static var previews: some View {
+        StatePickerView()
+    }
 }
