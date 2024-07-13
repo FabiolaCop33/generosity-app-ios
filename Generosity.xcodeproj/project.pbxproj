@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3658D22C4300630076A41B /* StatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3658D12C4300630076A41B /* StatePickerView.swift */; };
 		CC4ADEBB2C37697400E5A59F /* CentrosBondadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEAB2C37697400E5A59F /* CentrosBondadViewModel.swift */; };
 		CC4ADEBC2C37697400E5A59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4ADEAD2C37697400E5A59F /* Assets.xcassets */; };
 		CC4ADEBD2C37697400E5A59F /* CentroBondadDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4ADEAE2C37697400E5A59F /* CentroBondadDetailView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC3658D12C4300630076A41B /* StatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePickerView.swift; sourceTree = "<group>"; };
 		CC4ADEAB2C37697400E5A59F /* CentrosBondadViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentrosBondadViewModel.swift; sourceTree = "<group>"; };
 		CC4ADEAD2C37697400E5A59F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Generosity/Assets.xcassets; sourceTree = "<group>"; };
 		CC4ADEAE2C37697400E5A59F /* CentroBondadDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentroBondadDetailView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				CC4ADEAF2C37697400E5A59F /* CentroBondadMapView.swift */,
 				CCDEAE222C40585E007F446C /* CentroBondadCategoryListView.swift */,
 				CC735ECF2C3CC5FB002E3FD8 /* CentroBondadListView.swift */,
+				CC3658D12C4300630076A41B /* StatePickerView.swift */,
 				CCDEAE242C40587E007F446C /* CategoryCardView.swift */,
 				CC4ADEB02C37697400E5A59F /* ContentView.swift */,
 				CCDEAE202C404C80007F446C /* CategoryGridView.swift */,
@@ -210,6 +213,7 @@
 				CC4ADEBF2C37697400E5A59F /* ContentView.swift in Sources */,
 				CC4ADEBE2C37697400E5A59F /* CentroBondadMapView.swift in Sources */,
 				CC4ADEC02C37697400E5A59F /* GenerosityApp.swift in Sources */,
+				CC3658D22C4300630076A41B /* StatePickerView.swift in Sources */,
 				CCDEAE252C40587E007F446C /* CategoryCardView.swift in Sources */,
 				CC4ADEC42C37697400E5A59F /* Constants.swift in Sources */,
 				CC735ED02C3CC5FB002E3FD8 /* CentroBondadListView.swift in Sources */,
