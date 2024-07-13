@@ -19,4 +19,13 @@ class CentrosBondadViewModel{
             print(error.localizedDescription)
         }
     }
+    
+    func filterCentrosById(centros: [CentroBondadModel], id: Int) -> [CentroBondadModel] {
+      return centros.filter { $0.id == id }
+    }
+    
+    func filterCentrosByCategoryID(centros: [CentroBondadModel], id_category: String) -> [CentroBondadModel] {
+      return centros.filter { $0.id_category == id_category }
+    }
+
 }
