@@ -15,6 +15,7 @@ struct StatePickerView: View {
     
     var body: some View {
         VStack{
+            Text("Centros de Bondad en: \(selectedStateID)")
             Picker("Selecciona tu Estado...", selection: $selectedStateID){
                 ForEach(listOfStates, id: \.self){state in
                     Text(state)
@@ -23,7 +24,6 @@ struct StatePickerView: View {
                 }
             }
             .pickerStyle(.wheel)
-            Text("Mi Estado es: \(selectedStateID)")
         }
         .padding()
     }

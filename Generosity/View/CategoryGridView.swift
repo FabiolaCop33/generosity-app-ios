@@ -10,8 +10,7 @@ import SwiftUI
 struct CategoryGridView: View {
     var viewModel = CentrosBondadViewModel()
     var categories: [String: [CentroBondadModel]]
-    @State private var selectedStateID = ""
-    var showPicker = true
+    @State private var selectedCategory: String = ""
     
     init(categories: [String: [CentroBondadModel]]){
         self.categories = categories
@@ -28,7 +27,10 @@ struct CategoryGridView: View {
                         centrosBondad: categories[category] ?? []
                       )
                     ) {
-                      CategoryCardView(category: category)
+                        CategoryCardView(category: category)
+                            .onTapGesture {
+                                selectedCategory = category
+                            }
                     }
                   }
                 }
