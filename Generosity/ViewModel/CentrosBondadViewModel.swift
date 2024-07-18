@@ -15,6 +15,14 @@ class CentrosBondadViewModel{
         do {
            let response = try await Networking.shared.fetchCentrosBondad(at: Constants.Urls.centrosBondad)
             centrosBondad = response.results
+            for centro in centrosBondad {
+                let categoryId = centro.id_category
+                let categoryName = centro.category
+                
+                // Add category mapping
+                //categoryNameMap[categoryId] = categoryName
+            }
+                
         } catch {
             print(error.localizedDescription)
         }
