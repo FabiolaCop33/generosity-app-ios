@@ -23,8 +23,8 @@ struct CategoryGridView: View {
                 ForEach(categories.keys.sorted(), id: \.self) { category in
                     NavigationLink(
                       destination: CentroBondadCategoryListView(
-                        category: category,
-                        centrosBondad: categories[category] ?? []
+                        selectedCategory: category,
+                        viewModel: viewModel
                       )
                     ) {
                         CategoryCardView(category: category)
