@@ -9,11 +9,41 @@ import SwiftUI
 
 struct CentroBondadCategoryListView: View {
     let centros: [CentroBondadModel]
+    let backgroundGradient = LinearGradient(
+        colors: [Color.white,
+                 Color.blue
+                    .opacity(0.1)],
+        startPoint: .top, endPoint: .bottom)
 
     var body: some View {
-        List(centros) { centro in
-            Text(centro.name)
+        VStack{
+            Text("Centros de Bondad")
+                .font(.system(size: 40, weight: .bold))
+                .multilineTextAlignment(.leading)
+                List(centros) { centro in
+                    HStack{
+                        Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemGray))
+                            .frame(width: 50, height: 50)
+                        Text(centro.name)
+                            .font(.system(size: 20, weight: .regular))
+                            .multilineTextAlignment(.leading).foregroundColor(.blue
+                                .opacity(0.5))
+                            .shadow(color:.blue,radius: 2)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .listRowBackground(Capsule()
+                        .fill(backgroundGradient))
+                    .padding()
+                    
+                }
+                .listStyle(.plain)
+                .padding()
+                .shadow(radius: 100)
         }
+        .background(
+            .pink
+            .opacity(0.2))
     }
 }
 
