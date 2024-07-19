@@ -10,6 +10,7 @@ import Foundation
 
 class CentrosBondadViewModel{
     var centrosBondad: [CentroBondadModel] = []
+    var categories: [String: [CentroBondadModel]] = [:]
     
     func loadCentrosBondad() async {
         do {
@@ -18,6 +19,11 @@ class CentrosBondadViewModel{
             for centro in centrosBondad {
                 let categoryId = centro.id_category
                 let categoryName = centro.category
+                
+                if !categories.keys.contains(categoryId) {
+                                categories[categoryId] = []
+                            }
+                            categories[categoryId]?.append(centro)
                 
                 // Add category mapping
                 //categoryNameMap[categoryId] = categoryName

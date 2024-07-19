@@ -10,6 +10,7 @@ import MapKit
 
 
 struct ContentView: View {
+    var viewModel = CentrosBondadViewModel()
     
     var body: some View {
         
@@ -33,7 +34,7 @@ struct ContentView: View {
                 Image(systemName: "map")
             }
             NavigationStack(){
-                CategoryGridView(categories: ["Centro Asistencia Social a Niñas, Niños y Adolescentes": [], "Centro Asistencia Social a Adultos Mayores": [], "Centro de Asistencia Social a Personas con Discapacidad": [], "Centro de Asistencia Social a Personas con Adicciones": [], "Asistencia Social en Salud": []])
+                CategoryGridView(viewModel: viewModel)
                     .navigationTitle("Explorar en Generosity")
             }
             .tabItem {
@@ -44,6 +45,9 @@ struct ContentView: View {
         }
         .tint(.pink)
         .onAppear(perform: {
+            Task {
+                            await viewModel.loadCentrosBondad()
+                        }
             UITabBar.appearance().unselectedItemTintColor = .systemBrown
             UITabBarItem.appearance().badgeColor = .systemPink
             UITabBar.appearance().backgroundColor = .systemGray4.withAlphaComponent(0.4)
