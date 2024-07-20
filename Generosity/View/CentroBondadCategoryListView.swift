@@ -20,7 +20,7 @@ struct CentroBondadCategoryListView: View {
             .opacity(0.1)],
         startPoint: .top, endPoint: .bottom)
     @State private var selectedStateID = ""
-    
+    @State private var showStatePicker = false
 
 
     var body: some View {
@@ -30,7 +30,22 @@ struct CentroBondadCategoryListView: View {
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.pink)
                 .padding()
-            StatePickerView()
+            HStack{
+                Text("Estado:")
+                    .font(.system(size: 15, weight: .regular))
+                    .multilineTextAlignment(.leading).foregroundColor(.blue
+                        .opacity(0.5))
+                    .shadow(color:.blue,radius: 2)
+                Button(showStatePicker ? "Cerrar estados" : "Elegir Estado"){
+                    showStatePicker.toggle()
+                }
+                .foregroundColor(.gray)
+                .padding()
+            }
+            
+            if showStatePicker{
+                StatePickerView()
+            }
                 List(centros) { centro in
                     HStack{
                         Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemBrown))
