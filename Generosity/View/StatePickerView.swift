@@ -15,11 +15,16 @@ struct StatePickerView: View {
     
     var body: some View {
         VStack{
-            Text("Centros de Bondad en: \(selectedStateID)")
+            Text("Mi estado es: \(selectedStateID)")
+                .font(.system(size: 15, weight: .regular))
+                .multilineTextAlignment(.leading).foregroundColor(.blue
+                    .opacity(0.5))
+                .shadow(color:.blue,radius: 2)
             Picker("Selecciona tu Estado...", selection: $selectedStateID){
                 ForEach(listOfStates, id: \.self){state in
                     Text(state)
                         .font(.body)
+                        .bold().foregroundStyle(.brown)
                     
                 }
             }

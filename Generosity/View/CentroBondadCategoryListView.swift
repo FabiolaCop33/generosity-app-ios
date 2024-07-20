@@ -9,41 +9,53 @@ import SwiftUI
 
 struct CentroBondadCategoryListView: View {
     let centros: [CentroBondadModel]
+    let backgroundGradientCapsule = LinearGradient(
+        colors: [Color.white,
+                 Color.pink
+            .opacity(0.2)],
+        startPoint: .top, endPoint: .bottom)
     let backgroundGradient = LinearGradient(
         colors: [Color.white,
-                 Color.blue
-                    .opacity(0.1)],
+                 Color.pink
+            .opacity(0.1)],
         startPoint: .top, endPoint: .bottom)
+    @State private var selectedStateID = ""
+    
+
 
     var body: some View {
-        VStack{
+        VStack(){
             Text("Centros de Bondad")
                 .font(.system(size: 40, weight: .bold))
                 .multilineTextAlignment(.leading)
+                .foregroundColor(.pink)
+                .padding()
+            StatePickerView()
                 List(centros) { centro in
                     HStack{
-                        Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemGray))
-                            .frame(width: 50, height: 50)
+                        Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemBrown))
+                            .frame(width: 40, height: 40)
                         Text(centro.name)
-                            .font(.system(size: 20, weight: .regular))
+                            .font(.system(size: 15, weight: .regular))
                             .multilineTextAlignment(.leading).foregroundColor(.blue
                                 .opacity(0.5))
                             .shadow(color:.blue,radius: 2)
                         Spacer()
                         Image(systemName: "chevron.right")
+                            .foregroundColor(Color(.systemBrown))
+                            .imageScale(.large)
+                            .bold()
                     }
                     .listRowBackground(Capsule()
-                        .fill(backgroundGradient))
+                        .fill(backgroundGradientCapsule))
                     .padding()
                     
                 }
                 .listStyle(.plain)
-                .padding()
+                .padding(20)
                 .shadow(radius: 100)
         }
-        .background(
-            .pink
-            .opacity(0.2))
+        .background(backgroundGradient)
     }
 }
 
