@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StatePickerView: View {
-    @State private var selectedStateID = ""
+    @Binding var selectedStateID: String
     var listOfStates: [String] {
         return Constants.states
     }
@@ -36,6 +36,6 @@ struct StatePickerView: View {
 
 struct StatePickerView_Previews: PreviewProvider{
     static var previews: some View {
-        StatePickerView()
+        StatePickerView(selectedStateID: .constant("Aguascalientes"))
     }
 }
