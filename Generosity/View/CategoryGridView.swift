@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryGridView: View {
     var viewModel = CentrosBondadViewModel()
-    @State private var selectedCategory: String? = nil
+    @State var selectedCategory: String? = nil
     @State private var showSheet = false
 
     var body: some View {
@@ -33,7 +33,7 @@ struct CategoryGridView: View {
         }
         .sheet(isPresented: $showSheet) {
             if let selectedCategory = selectedCategory, let centros = viewModel.categories[selectedCategory] {
-                CentroBondadCategoryListView(centros: centros)
+                CentroBondadCategoryListView(centros: centros, selectedCategory: selectedCategory)
             }
         }
     }
