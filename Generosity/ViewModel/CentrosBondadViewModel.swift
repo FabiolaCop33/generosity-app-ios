@@ -21,13 +21,11 @@ class CentrosBondadViewModel{
                 let categoryId = centro.id_category
                 let categoryName = centro.category
                 
-                if !categories.keys.contains(categoryId) {
-                                categories[categoryId] = []
+                if !categories.keys.contains(categoryName) {
+                                categories[categoryName] = []
                             }
-                            categories[categoryId]?.append(centro)
+                            categories[categoryName]?.append(centro)
                 
-                // Add category mapping
-                //categoryNameMap[categoryId] = categoryName
             }
                 
         } catch {
@@ -35,9 +33,7 @@ class CentrosBondadViewModel{
         }
     }
     
-    func filterCentrosById(centros: [CentroBondadModel], id: Int) -> [CentroBondadModel] {
-      return centros.filter { $0.id == id }
-    }
+
     
  
     
