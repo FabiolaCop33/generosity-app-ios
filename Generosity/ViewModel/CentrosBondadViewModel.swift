@@ -12,6 +12,7 @@ class CentrosBondadViewModel{
     var centrosBondad: [CentroBondadModel] = []
     var categories: [String: [CentroBondadModel]] = [:]
     
+    
     func loadCentrosBondad() async {
         do {
            let response = try await Networking.shared.fetchCentrosBondad(at: Constants.Urls.centrosBondad)
@@ -37,6 +38,8 @@ class CentrosBondadViewModel{
     func filterCentrosById(centros: [CentroBondadModel], id: Int) -> [CentroBondadModel] {
       return centros.filter { $0.id == id }
     }
+    
+ 
     
     func filterCentrosByCategoryID(centros: [CentroBondadModel], id_category: String) -> [CentroBondadModel] {
       return centros.filter { $0.id_category == id_category }
