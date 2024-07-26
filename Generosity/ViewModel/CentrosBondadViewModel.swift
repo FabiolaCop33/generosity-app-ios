@@ -32,10 +32,10 @@ class CentrosBondadViewModel{
             print(error.localizedDescription)
         }
     }
-    
-
-    
- 
+    func getState(for id: Int) -> String?{
+        let prefix = String(id).prefix(7)
+        return Constants.statePrefixes[String(prefix)]
+    }
     
     func filterCentrosByCategoryID(centros: [CentroBondadModel], id_category: String) -> [CentroBondadModel] {
       return centros.filter { $0.id_category == id_category }
