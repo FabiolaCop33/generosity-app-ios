@@ -9,12 +9,8 @@ import SwiftUI
 
 struct StatePickerView: View {
     @Binding var selectedStateID: String
-    var listOfStates: [String] {
-        return Constants.listStates
-    }
-    var listOfEnableStates: [String] {
-        return Constants.enabledStates
-    }
+    var listOfStates: [String] 
+    let enabledStates: Set<String>
     
     var body: some View {
         VStack{
@@ -29,7 +25,7 @@ struct StatePickerView: View {
                         .font(.body)
                         .bold()
                         .foregroundStyle(.brown)
-                        .disabled(!listOfEnableStates.contains(listOfStates))
+                        .disabled(!enabledStates.contains(state))
                     
                 }
             }
@@ -39,8 +35,3 @@ struct StatePickerView: View {
     }
 }
 
-struct StatePickerView_Previews: PreviewProvider{
-    static var previews: some View {
-        StatePickerView(selectedStateID: .constant("Aguascalientes"))
-    }
-}

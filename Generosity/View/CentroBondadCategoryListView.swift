@@ -57,7 +57,7 @@ struct CentroBondadCategoryListView: View {
             }
             
             if showStatePicker{
-                StatePickerView(selectedStateID: $selectedStateID)
+                StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states, enabledStates: Constants.enabledStates)
             }
                 List(centros) { centro in
                     HStack{

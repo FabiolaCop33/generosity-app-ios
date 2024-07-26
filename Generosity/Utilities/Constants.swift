@@ -12,7 +12,7 @@ struct Constants{
         static let centrosBondad = URL(string: "http://localhost:8080/centros-de-bondad")!
     }
     
-    static let listStates: [String] = [
+    static let states: [String] = [
         "Aguascalientes",
         "Baja California",
         "Baja California Sur",
@@ -46,7 +46,7 @@ struct Constants{
         "Yucatán",
         "Zacatecas"]
     
-    static let enabledStates: [String] = [
+    static let enabledStates: Set <String> = [
         "Aguascalientes"]
     
     static let statePrefixes: [String: String] = [
