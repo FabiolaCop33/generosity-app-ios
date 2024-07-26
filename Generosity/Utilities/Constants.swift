@@ -49,40 +49,6 @@ struct Constants{
     static let enabledStates: [String] = [
         "Aguascalientes"]
     
-    static let states: [String] = [
-        "Aguascalientes",
-        "Baja California",
-        "Baja California Sur",
-        "Campeche",
-        "Chiapas",
-        "Chihuahua",
-        "Coahuila de Zaragosa",
-        "Colima",
-        "Ciudad de México",
-        "Durango",
-        "Guanajuato",
-        "Guerrero",
-        "Hidalgo",
-        "Jalisco",
-        "México",
-        "Michoacán de Ocampo",
-        "Morelos",
-        "Nayarit",
-        "Nuevo León",
-        "Oaxaca",
-        "Puebla",
-        "Querétaro",
-        "Quintana Roo",
-        "San Luis Potosí",
-        "Sinaloa",
-        "Sonora",
-        "Tabasco",
-        "Tamaulipas",
-        "Tlaxcala",
-        "Veracruz de Ignacio de la Llave",
-        "Yucatán",
-        "Zacatecas"]
-    
     static let statePrefixes: [String: String] = [
         "1280001": "Aguascalientes",
         "1280002": "Baja California",

@@ -10,7 +10,10 @@ import SwiftUI
 struct StatePickerView: View {
     @Binding var selectedStateID: String
     var listOfStates: [String] {
-        return Constants.states
+        return Constants.listStates
+    }
+    var listOfEnableStates: [String] {
+        return Constants.enabledStates
     }
     
     var body: some View {
@@ -24,7 +27,9 @@ struct StatePickerView: View {
                 ForEach(listOfStates, id: \.self){state in
                     Text(state)
                         .font(.body)
-                        .bold().foregroundStyle(.brown)
+                        .bold()
+                        .foregroundStyle(.brown)
+                        .disabled(!listOfEnableStates.contains(listOfStates))
                     
                 }
             }
