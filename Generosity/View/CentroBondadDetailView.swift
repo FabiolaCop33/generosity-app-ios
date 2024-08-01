@@ -12,16 +12,18 @@ struct CentroBondadDetailView: View{
     let centroBondad: CentroBondadModel
     let backgroundGradient = LinearGradient(
         colors: [Color.white,
-                 Color.cyan
-                    .opacity(0.08)],
+                 Color.pink
+            .opacity(0.1)],
         startPoint: .top, endPoint: .bottom)
     
     var body: some View{
         ScrollView{
             VStack(alignment: .leading){
-                    Text("Centro de Bondad")
-                        .font(.system(size: 40, weight: .bold))
-                        .multilineTextAlignment(.leading)
+                Text("Centro de Bondad")
+                    .font(.system(size: 40, weight: .bold))
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.pink)
+                    .padding()
                     HStack{
                         Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemGray))
                             .frame(width: 50, height: 50)
