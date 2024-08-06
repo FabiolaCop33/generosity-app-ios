@@ -18,7 +18,7 @@ class CentrosBondadViewModel{
            let response = try await Networking.shared.fetchCentrosBondad(at: Constants.Urls.centrosBondad)
             centrosBondad = response.results
             for centro in centrosBondad {
-                let categoryId = centro.id_category
+                //let categoryId = centro.id_category
                 let categoryName = centro.category
                 
                 if !categories.keys.contains(categoryName) {

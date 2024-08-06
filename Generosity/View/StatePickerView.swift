@@ -9,8 +9,7 @@ import SwiftUI
 
 struct StatePickerView: View {
     @Binding var selectedStateID: String
-    var listOfStates: [String] 
-    let enabledStates: Set<String>
+    var listOfStates: [String]
     
     var body: some View {
         VStack{
@@ -25,13 +24,21 @@ struct StatePickerView: View {
                         .font(.body)
                         .bold()
                         .foregroundStyle(.brown)
-                        .disabled(!enabledStates.contains(state))
-                    
                 }
             }
             .pickerStyle(.wheel)
+            .onChange(of: selectedStateID) { newValue in
+                print("Nuevo estado seleccionado: \(newValue)")
+            }
         }
         .padding()
     }
 }
-
+struct StatePickerView_Previews: PreviewProvider {
+  static var previews: some View {
+    StatePickerView(
+      selectedStateID: .constant("1280001"),
+      listOfStates: ["Aguascalientes", "Baja California", "Campeche"]
+    )
+  }
+}

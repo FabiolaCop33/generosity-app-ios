@@ -22,6 +22,14 @@ struct CentroBondadCategoryListView: View {
     let selectedCategory: String
     @State private var showStatePicker = false
     @State private var selectedStateID = ""
+    let viewModel = CentrosBondadViewModel()
+    
+    var filteredCentros:[CentroBondadModel]{
+        return centros.filter {centro in
+            guard let stateName = viewModel.getState(for: centro.id) else {return false}
+            return stateName == selectedStateID
+        }
+    }
 
 
     var body: some View {
@@ -57,9 +65,9 @@ struct CentroBondadCategoryListView: View {
             }
             
             if showStatePicker{
-                StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states, enabledStates: Constants.enabledStates)
+                StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
             }
-                List(centros) { centro in
+                List(filteredCentros) { centro in
                     HStack{
                         Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemBrown))
                             .frame(width: 40, height: 40)
