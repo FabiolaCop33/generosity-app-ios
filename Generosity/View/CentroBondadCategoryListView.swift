@@ -33,12 +33,13 @@ struct CentroBondadCategoryListView: View {
 
 
     var body: some View {
-        VStack(){
+        VStack(alignment: .leading){
             Text("Centros de Bondad")
                 .font(.system(size: 40, weight: .bold))
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.pink)
                 .padding()
+           
             HStack{
                 Text("Categoria:" )
                     .font(.system(size: 15, weight: .regular))
@@ -51,22 +52,47 @@ struct CentroBondadCategoryListView: View {
                         .opacity(0.5))
                     .shadow(color:.blue,radius: 2)
             }
+            .padding()
+            Button {
+              showStatePicker.toggle()
+            } label: {
+              Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
+                .foregroundColor(.gray)
+                .padding()
+            }
+            if showStatePicker{
+                StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
+            }
             HStack(){
-                Text("Estado:")
+                Text("Estado: ")
                     .font(.system(size: 15, weight: .regular))
                     .multilineTextAlignment(.leading).foregroundColor(.blue
                         .opacity(0.5))
                     .shadow(color:.blue,radius: 2)
-                Button(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado..."){
-                    showStatePicker.toggle()
+                Text("\(selectedStateID)")
+                    .font(.system(size: 15, weight: .regular))
+                    .multilineTextAlignment(.leading).foregroundColor(.blue
+                        .opacity(0.5))
+                    .shadow(color:.blue,radius: 2)
+                
+            }
+            .padding()
+            Divider()
+            if filteredCentros.isEmpty{
+                Spacer()
+                if selectedStateID.isEmpty {
+                    Text("Selecciona un estado para ver los Centros de Bondad.")
+                        .font(.subheadline.italic())
+                        .foregroundColor(Color(.systemGray))
+                        .padding(50)
+                } else {
+                    Text("Actualmente no hay Centros de Bondad en \(selectedStateID) en la categoría \(selectedCategory)")
+                        .font(.subheadline.italic())
+                        .foregroundColor(Color(.systemGray))
+                        .padding()
                 }
-                .foregroundColor(.gray)
-                .padding()
-            }
-            
-            if showStatePicker{
-                StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
-            }
+                Spacer()
+            } else {
                 List(filteredCentros) { centro in
                     HStack{
                         Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemBrown))
@@ -88,11 +114,11 @@ struct CentroBondadCategoryListView: View {
                     
                 }
                 .listStyle(.plain)
-                .padding(20)
+                .padding(10)
                 .shadow(radius: 100)
+            }
         }
         .background(backgroundGradient)
-        
     }
 }
 
