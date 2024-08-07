@@ -33,50 +33,45 @@ struct CentroBondadCategoryListView: View {
 
 
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .center, spacing:3){
             Text("Centros de Bondad")
                 .font(.system(size: 40, weight: .bold))
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.pink)
                 .padding()
-           
-            HStack{
-                Text("Categoria:" )
-                    .font(.system(size: 15, weight: .regular))
-                    .multilineTextAlignment(.leading).foregroundColor(.blue
-                        .opacity(0.5))
-                    .shadow(color:.blue,radius: 2)
-                Text("\(selectedCategory)")
-                    .font(.system(size: 15, weight: .regular))
-                    .multilineTextAlignment(.leading).foregroundColor(.blue
-                        .opacity(0.5))
-                    .shadow(color:.blue,radius: 2)
+            GroupBox{
+                GroupBox{
+                    Text("\(selectedCategory)").foregroundStyle(.brown)
+                }
+            }label: {
+                Label("Categoría:", systemImage: "figure.stand")
+                    .foregroundStyle(.pink)
             }
+            .background(.regularMaterial)
             .padding()
-            Button {
-              showStatePicker.toggle()
-            } label: {
-              Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
-                .foregroundColor(.gray)
-                .padding()
+            .frame(width: 400, height: 200)
+            GroupBox{
+                GroupBox{
+                    Button {
+                      showStatePicker.toggle()
+                    } label: {
+                      Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
+                        .foregroundColor(.gray)
+                        .padding()
+                    }
+                    Text("\(selectedStateID)").foregroundStyle(.brown)
+                }
+            }label: {
+                Label("Estado: ", systemImage: "map")
+                    .foregroundStyle(.pink)
             }
+            .background(.regularMaterial)
+            .padding()
+
             if showStatePicker{
                 StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
             }
-            HStack(){
-                Text("Estado: ")
-                    .font(.system(size: 15, weight: .regular))
-                    .multilineTextAlignment(.leading).foregroundColor(.blue
-                        .opacity(0.5))
-                    .shadow(color:.blue,radius: 2)
-                Text("\(selectedStateID)")
-                    .font(.system(size: 15, weight: .regular))
-                    .multilineTextAlignment(.leading).foregroundColor(.blue
-                        .opacity(0.5))
-                    .shadow(color:.blue,radius: 2)
-                
-            }
-            .padding()
+            
             Divider()
             if filteredCentros.isEmpty{
                 Spacer()
