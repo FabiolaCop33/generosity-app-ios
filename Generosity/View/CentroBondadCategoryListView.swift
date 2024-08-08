@@ -36,11 +36,12 @@ struct CentroBondadCategoryListView: View {
         .padding()
         ZStack(alignment:.center){
               RoundedRectangle(cornerRadius: 10)
-                  .frame(width: 380,height: 180)
+                  .frame(width: 380,height: 200)
                   .foregroundStyle(.regularMaterial)
+                  .shadow(color: .black .opacity(0.7), radius: 40, x: 0, y: 3)
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 350,height: 120)
-                .foregroundStyle(.regularMaterial)
+                .foregroundStyle(.white)
               VStack(alignment: .leading){
                   HStack(alignment: .center) {
                     Label("Categoría:", systemImage: "figure.stand")
