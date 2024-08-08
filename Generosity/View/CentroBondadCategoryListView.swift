@@ -8,86 +8,86 @@
 import SwiftUI
 
 struct CentroBondadCategoryListView: View {
-    let centros: [CentroBondadModel]
-    let backgroundGradientCapsule = LinearGradient(
-        colors: [Color.white,
-                 Color.pink
-            .opacity(0.2)],
-        startPoint: .top, endPoint: .bottom)
-    let backgroundGradient = LinearGradient(
-        colors: [Color.white,
-                 Color.pink
-            .opacity(0.1)],
-        startPoint: .top, endPoint: .bottom)
-    let selectedCategory: String
-    @State private var showStatePicker = false
-    @State private var selectedStateID = ""
-    let viewModel = CentrosBondadViewModel()
-    
-    var filteredCentros:[CentroBondadModel]{
-        return centros.filter {centro in
-            guard let stateName = viewModel.getState(for: centro.id) else {return false}
-            return stateName == selectedStateID
-        }
+  let centros: [CentroBondadModel]
+  let backgroundGradientCapsule = LinearGradient(
+    colors: [Color.white, Color.pink.opacity(0.2)],
+    startPoint: .top, endPoint: .bottom)
+  let backgroundGradient = LinearGradient(
+    colors: [Color.white, Color.pink.opacity(0.8)],
+    startPoint: .top, endPoint: .bottom)
+  let selectedCategory: String
+  @State private var showStatePicker = false
+  @State private var selectedStateID = ""
+  let viewModel = CentrosBondadViewModel()
+
+  var filteredCentros: [CentroBondadModel] {
+    return centros.filter { centro in
+      guard let stateName = viewModel.getState(for: centro.id) else { return false }
+      return stateName == selectedStateID
     }
+  }
 
-
-    var body: some View {
-        VStack(alignment: .center, spacing:3){
-            Text("Centros de Bondad")
-                .font(.system(size: 40, weight: .bold))
-                .multilineTextAlignment(.leading)
-                .foregroundColor(.pink)
-                .padding()
-            GroupBox{
-                GroupBox{
-                    Text("\(selectedCategory)").foregroundStyle(.brown)
-                }
-            }label: {
-                Label("Categoría:", systemImage: "figure.stand")
-                    .foregroundStyle(.pink)
-            }
-            .background(.regularMaterial)
-            .padding()
-            .frame(width: 400, height: 200)
-            GroupBox{
-                GroupBox{
-                    Button {
-                      showStatePicker.toggle()
-                    } label: {
-                      Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
-                        .foregroundColor(.gray)
-                        .padding()
+  var body: some View {
+    VStack(alignment: .center, spacing: 3) {
+      Text("Centros de Bondad")
+        .font(.system(size: 40, weight: .bold))
+        .multilineTextAlignment(.leading)
+        .foregroundColor(.white)
+        .padding()
+        ZStack(alignment:.center){
+              RoundedRectangle(cornerRadius: 10)
+                  .frame(width: 380,height: 180)
+                  .foregroundStyle(.regularMaterial)
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 350,height: 120)
+                .foregroundStyle(.regularMaterial)
+              VStack(alignment: .leading){
+                  HStack(alignment: .center) {
+                    Label("Categoría:", systemImage: "figure.stand")
+                      .foregroundStyle(.pink)
+                    Text(selectedCategory)
+                          .foregroundStyle(.brown)
+                          .font(.system(size: 12, weight: .bold))
+                  }
+                    HStack(alignment: .center){
+                        Label("Estado:", systemImage: "map")
+                          .foregroundStyle(.pink)
+                        Text(selectedStateID)
+                          .foregroundStyle(.brown)
+                          .font(.system(size: 12, weight: .bold))
+                        Button {
+                          showStatePicker.toggle()
+                        } label: {
+                          Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
+                                .foregroundColor(.gray).font(.caption2)
+                            .padding()
+                        }
                     }
-                    Text("\(selectedStateID)").foregroundStyle(.brown)
-                }
-            }label: {
-                Label("Estado: ", systemImage: "map")
-                    .foregroundStyle(.pink)
-            }
-            .background(.regularMaterial)
-            .padding()
+              }.padding(20)
+        }.padding(20)
 
-            if showStatePicker{
-                StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
-            }
-            
-            Divider()
-            if filteredCentros.isEmpty{
-                Spacer()
-                if selectedStateID.isEmpty {
-                    Text("Selecciona un estado para ver los Centros de Bondad.")
-                        .font(.subheadline.italic())
-                        .foregroundColor(Color(.systemGray))
-                        .padding(50)
-                } else {
-                    Text("Actualmente no hay Centros de Bondad en \(selectedStateID) en la categoría \(selectedCategory)")
-                        .font(.subheadline.italic())
-                        .foregroundColor(Color(.systemGray))
-                        .padding()
-                }
-                Spacer()
-            } else {
+
+      if showStatePicker {
+        StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
+      }
+
+      Divider()
+
+      if filteredCentros.isEmpty {
+        Spacer()
+        if selectedStateID.isEmpty {
+          Text("Selecciona un estado para ver los Centros de Bondad.")
+            .font(.subheadline.italic())
+            .foregroundColor(Color(.systemGray))
+            .padding(50)
+        } else {
+          Text("Actualmente no hay Centros de Bondad en \(selectedStateID) en la categoría \(selectedCategory)")
+            .font(.subheadline.italic())
+            .foregroundColor(Color(.systemGray))
+            .padding()
+        }
+        Spacer()
+      } else {
                 List(filteredCentros) { centro in
                     HStack{
                         Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemBrown))
@@ -113,7 +113,7 @@ struct CentroBondadCategoryListView: View {
                 .shadow(radius: 100)
             }
         }
-        .background(backgroundGradient)
+    .background(.pink.opacity(0.8))
     }
 }
 

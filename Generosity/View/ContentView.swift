@@ -44,16 +44,18 @@ struct ContentView: View {
             
         }
         .tint(.pink)
+        
         .onAppear(perform: {
             Task {
                             await viewModel.loadCentrosBondad()
                         }
             UITabBar.appearance().unselectedItemTintColor = .systemBrown
             UITabBarItem.appearance().badgeColor = .systemPink
-            UITabBar.appearance().backgroundColor = .systemGray4.withAlphaComponent(0.4)
+            UITabBar.appearance().backgroundColor = .systemGray4.withAlphaComponent(0.1)
             UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.systemPink]
             
         })
+
     }
 
   }
