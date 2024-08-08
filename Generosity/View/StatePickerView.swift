@@ -12,7 +12,13 @@ struct StatePickerView: View {
     var listOfStates: [String]
     
     var body: some View {
-        VStack{
+    ZStack{
+        RoundedRectangle(cornerRadius: 10)
+            .frame(width: 380,height: 180)
+            .foregroundStyle(.regularMaterial)
+      RoundedRectangle(cornerRadius: 10)
+          .frame(width: 350,height: 120)
+          .foregroundStyle(.regularMaterial)
             Picker("Selecciona tu Estado...", selection: $selectedStateID){
                 ForEach(listOfStates, id: \.self){state in
                     Text(state)

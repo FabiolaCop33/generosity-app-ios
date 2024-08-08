@@ -10,10 +10,10 @@ import SwiftUI
 struct CentroBondadCategoryListView: View {
   let centros: [CentroBondadModel]
   let backgroundGradientCapsule = LinearGradient(
-    colors: [Color.white, Color.pink.opacity(0.2)],
+    colors: [Color.white, Color.gray.opacity(0.5)],
     startPoint: .top, endPoint: .bottom)
   let backgroundGradient = LinearGradient(
-    colors: [Color.white, Color.pink.opacity(0.8)],
+    colors: [Color.pink.opacity(0.4), Color.pink.opacity(0.8)],
     startPoint: .top, endPoint: .bottom)
   let selectedCategory: String
   @State private var showStatePicker = false
@@ -71,32 +71,28 @@ struct CentroBondadCategoryListView: View {
         StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
       }
 
-      Divider()
-
       if filteredCentros.isEmpty {
         Spacer()
         if selectedStateID.isEmpty {
           Text("Selecciona un estado para ver los Centros de Bondad.")
             .font(.subheadline.italic())
-            .foregroundColor(Color(.systemGray))
+            .foregroundColor(Color(.white))
             .padding(50)
         } else {
           Text("Actualmente no hay Centros de Bondad en \(selectedStateID) en la categoría \(selectedCategory)")
             .font(.subheadline.italic())
-            .foregroundColor(Color(.systemGray))
+            .foregroundColor(Color(.white))
             .padding()
         }
         Spacer()
       } else {
                 List(filteredCentros) { centro in
                     HStack{
-                        Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemBrown))
+                        Image(systemName: "person.circle.fill").resizable().scaledToFit().foregroundColor(Color(.systemPink))
                             .frame(width: 40, height: 40)
                         Text(centro.name)
-                            .font(.system(size: 15, weight: .regular))
-                            .multilineTextAlignment(.leading).foregroundColor(.blue
-                                .opacity(0.5))
-                            .shadow(color:.blue,radius: 2)
+                            .font(.system(size: 15, weight: .bold))
+                            .multilineTextAlignment(.leading).foregroundColor(.brown)
                         Spacer()
                         Image(systemName: "chevron.right")
                             .foregroundColor(Color(.systemBrown))
@@ -105,7 +101,7 @@ struct CentroBondadCategoryListView: View {
                     }
                     .listRowBackground(Capsule()
                         .fill(backgroundGradientCapsule))
-                    .padding()
+                    .padding(1)
                     
                 }
                 .listStyle(.plain)
@@ -113,7 +109,7 @@ struct CentroBondadCategoryListView: View {
                 .shadow(radius: 100)
             }
         }
-    .background(.pink.opacity(0.8))
+    .background(backgroundGradient)
     }
 }
 
