@@ -13,7 +13,7 @@ struct CentroBondadCategoryListView: View {
     colors: [Color.white, Color.gray.opacity(0.5)],
     startPoint: .top, endPoint: .bottom)
   let backgroundGradient = LinearGradient(
-    colors: [Color.pink.opacity(0.4), Color.pink.opacity(0.8)],
+    colors: [Color.pink.opacity(0.1), Color.pink.opacity(0.8)],
     startPoint: .top, endPoint: .bottom)
   let selectedCategory: String
   @State private var showStatePicker = false
@@ -28,49 +28,41 @@ struct CentroBondadCategoryListView: View {
   }
 
   var body: some View {
-    VStack(alignment: .center, spacing: 3) {
+      VStack(alignment: .center, spacing: 3) {
       Text("Centros de Bondad")
         .font(.system(size: 40, weight: .bold))
         .multilineTextAlignment(.leading)
-        .foregroundColor(.white)
+        .foregroundColor(.pink)
         .padding()
-        ZStack(alignment:.center){
-              RoundedRectangle(cornerRadius: 10)
-                  .frame(width: 380,height: 200)
-                  .foregroundStyle(.regularMaterial)
-                  .shadow(color: .black .opacity(0.7), radius: 40, x: 0, y: 3)
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 350,height: 120)
-                .foregroundStyle(.white)
-              VStack(alignment: .leading){
-                  HStack(alignment: .center) {
-                    Label("Categoría:", systemImage: "figure.stand")
-                      .foregroundStyle(.pink)
+        Form {
+            Section("Información General") {
+                LabeledContent {
                     Text(selectedCategory)
-                          .foregroundStyle(.brown)
-                          .font(.system(size: 12, weight: .bold))
-                  }
-                    HStack(alignment: .center){
-                        Label("Estado:", systemImage: "map")
-                          .foregroundStyle(.pink)
-                        Text(selectedStateID)
-                          .foregroundStyle(.brown)
-                          .font(.system(size: 12, weight: .bold))
-                        Button {
-                          showStatePicker.toggle()
-                        } label: {
-                          Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
-                                .foregroundColor(.gray).font(.caption2)
-                            .padding()
+                } label: {
+                    Label("Categoría:", systemImage: "figure.stand")
+                }
+                LabeledContent {
+                    Text(selectedStateID)
+                        .onTapGesture {
+                            showStatePicker.toggle()
                         }
-                    }
-              }.padding(20)
-        }.padding(20)
-
-
+                } label: {
+                    Label("Estado:", systemImage: "map")
+                }
+            }
+        }
+        .listStyle(.grouped)
+        
       if showStatePicker {
         StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
       }
+        Button {
+          showStatePicker.toggle()
+        } label: {
+          Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
+                .foregroundColor(.white).font(.title3)
+                .padding(.top)
+        }
 
       if filteredCentros.isEmpty {
         Spacer()
@@ -84,6 +76,10 @@ struct CentroBondadCategoryListView: View {
             .font(.subheadline.italic())
             .foregroundColor(Color(.white))
             .padding()
+        Text("Amplía tu búsqueda o explora otras categorías.")
+            .font(.caption)
+            .foregroundColor(Color(.gray))
+            padding()
         }
         Spacer()
       } else {
@@ -100,9 +96,11 @@ struct CentroBondadCategoryListView: View {
                             .imageScale(.large)
                             .bold()
                     }
-                    .listRowBackground(Capsule()
-                        .fill(backgroundGradientCapsule))
-                    .padding(1)
+                    .listRowBackground(
+                        Capsule()
+                        .fill(backgroundGradientCapsule)
+                        .padding(1)
+                        )
                     
                 }
                 .listStyle(.plain)
