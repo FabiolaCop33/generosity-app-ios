@@ -34,6 +34,13 @@ struct CentroBondadCategoryListView: View {
         .multilineTextAlignment(.leading)
         .foregroundColor(.pink)
         .padding()
+          Button {
+            showStatePicker.toggle()
+          } label: {
+            Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
+                  .foregroundColor(.white).font(.title3)
+                  .padding(.top)
+          }
         Form {
             Section("Información General") {
                 LabeledContent {
@@ -50,19 +57,15 @@ struct CentroBondadCategoryListView: View {
                     Label("Estado:", systemImage: "map")
                 }
             }
+            Section("Centros de Bondad") {
+
+            }
         }
         .listStyle(.grouped)
         
       if showStatePicker {
         StatePickerView(selectedStateID: $selectedStateID, listOfStates: Constants.states)
       }
-        Button {
-          showStatePicker.toggle()
-        } label: {
-          Text(showStatePicker ? "Cerrar estados" : "Selecciona tu Estado...")
-                .foregroundColor(.white).font(.title3)
-                .padding(.top)
-        }
 
       if filteredCentros.isEmpty {
         Spacer()
